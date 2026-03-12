@@ -184,23 +184,23 @@ let savedQuestion = 0;
 Q5.addEventListener("click",function(){
     savedQuestion = 5;
     resetButton();
-    Q5.style.backgroundColor = "gray";
+    Q5.style.backgroundColor = "#23189e";
 
 })
 Q10.addEventListener("click",function(){
     savedQuestion = 10;
     resetButton();
-    Q10.style.backgroundColor = "gray";
+    Q10.style.backgroundColor = "#23189e";
 })
 Q20.addEventListener("click",function(){
     savedQuestion = 20;
     resetButton();
-    Q20.style.backgroundColor = "gray";
+    Q20.style.backgroundColor = "#23189e";
 })
 Q40.addEventListener("click",function(){
     savedQuestion = 40;
     resetButton();
-    Q40.style.backgroundColor = "gray";
+    Q40.style.backgroundColor = "#23189e";
 })
 function resetButton(){
     Q5.style.backgroundColor = "";
