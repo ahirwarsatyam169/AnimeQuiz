@@ -1,0 +1,151 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#1e1e2f,#2a2a40);
+    color:white;
+}
+
+/* Main container */
+
+.container{
+    width:400px;
+    max-width:90%;
+    background:#2f2f46;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* Headings */
+
+h1{
+    margin-bottom:15px;
+}
+
+h2{
+    margin:15px 0;
+    font-size:20px;
+}
+
+/* Buttons */
+
+button{
+    padding:10px 15px;
+    margin:6px;
+    border:none;
+    border-radius:6px;
+    background:#5a67ff;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+button:hover{
+    background:#4752d6;
+}
+
+/* Start button */
+
+#start_btn{
+    display:block;
+    width:100%;
+    margin-top:20px;
+    background:#00b894;
+}
+
+#start_btn:hover{
+    background:#00a383;
+}
+
+/* Next button */
+
+#next_btn{
+    margin-top:20px;
+    background:#fdcb6e;
+    color:black;
+}
+
+#next_btn:hover{
+    background:#e1b95e;
+}
+
+/* Character image */
+
+img{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+/* Options container */
+
+.options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:10px;
+}
+
+/* Option buttons */
+
+.option{
+    background:#6c5ce7;
+}
+
+.option:hover{
+    background:#5a4ed6;
+}
+
+/* Hide screens initially */
+
+.question-screen,
+.end-screen{
+    display:none;
+
+}
+.start-screen,
+.question-screen,
+.end-screen{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width:500px){
+
+.container{
+    padding:20px;
+}
+
+img{
+    width:150px;
+    height:150px;
+}
+
+.options{
+    grid-template-columns:1fr;
+}
+
+button{
+    width:100%;
+}
+
+}       
