@@ -10,6 +10,7 @@ const options = document.querySelector(".options");
 const char_img = document.querySelector("#char-img");
 const next = document.querySelector("#next_btn");
 const result_score = document.querySelector("#result_score");
+const replay = document.querySelector("#replay");
 const characters = [
     
     {
@@ -229,7 +230,12 @@ start.addEventListener("click", function(){
 
 //QUESTIONS
 let currentQuestionIndex = 0;
+
+let answered = false;
+
 function loadquestion (){
+    
+    answered = false; //reset for new question
     
     options.innerHTML = "";
 
@@ -270,6 +276,7 @@ function loadquestion (){
 let correctAnswer = "";
 options.addEventListener("click",function(e){
     if(e.target.tagName === "BUTTON"){
+        answered = true;
         const allOptions = options.querySelectorAll("button");
         
         
@@ -307,6 +314,12 @@ options.addEventListener("click",function(e){
 
 //NEXT BUTTON
 next.addEventListener("click",function(){
+    
+    if(!answered){
+        alert("Please select an option first!");   
+        return;
+    }
+    
     if(currentQuestionIndex + 1 < savedQuestion){
         currentQuestionIndex++;
         loadquestion();
@@ -314,8 +327,11 @@ next.addEventListener("click",function(){
     else{
         question_screen.style.display = "none";
         end_screen.style.display = "flex";
-        result_score.textContent = score;
+        result_score.textContent = score+"/"+savedQuestion;
     }
 
 
+})
+replay.addEventListener("click",function(){
+    location.reload();
 })
