@@ -58,6 +58,7 @@ button{
 
 button:hover{
     background:#4752d6;
+    box-shadow: 0 0 5px white;
 }
 
 /* Start button */
@@ -93,7 +94,9 @@ img{
     object-fit:cover;
     border-radius:10px;
     margin:15px 0;
+    box-shadow: 0 0 15px white;
 }
+
 
 /* Options container */
 
